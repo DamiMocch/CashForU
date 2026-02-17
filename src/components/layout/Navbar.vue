@@ -63,7 +63,6 @@ const toggleMenu = () => {
     </div>
   </nav>
 </template>
-
 <style scoped>
 .navbar {
   background-color: #fff;
