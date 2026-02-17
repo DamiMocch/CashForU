@@ -1,6 +1,6 @@
 <script setup>
 defineOptions({
-  name: 'AppNavbar'
+  name: 'AppNavbar',
 })
 import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
@@ -10,7 +10,6 @@ const isOpen = ref(false)
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
 }
-
 </script>
 
 <template>
@@ -45,9 +44,15 @@ const toggleMenu = () => {
         </RouterLink>
         <div class="mobile-nav-links">
           <RouterLink to="/" class="mobile-link" @click="isOpen = false">Inicio</RouterLink>
-          <router-link to="/factoraje" class="mobile-link" @click="isOpen = false">Factoraje</router-link>
-          <RouterLink to="/empresas" class="mobile-link" @click="isOpen = false">Empresas</RouterLink>
-          <router-link to="/contactanos" class="mobile-link" @click="isOpen = false">Contáctanos</router-link>
+          <router-link to="/factoraje" class="mobile-link" @click="isOpen = false"
+            >Factoraje</router-link
+          >
+          <RouterLink to="/empresas" class="mobile-link" @click="isOpen = false"
+            >Empresas</RouterLink
+          >
+          <router-link to="/contactanos" class="mobile-link" @click="isOpen = false"
+            >Contáctanos</router-link
+          >
 
           <div class="mobile-actions">
             <a href="#" class="btn btn-secondary btn-sm full-width">Acceder a U-Hub</a>
@@ -63,7 +68,7 @@ const toggleMenu = () => {
 .navbar {
   background-color: #fff;
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -94,10 +99,29 @@ const toggleMenu = () => {
 .nav-link {
   font-weight: 500;
   color: var(--text-dark);
+  position: relative;
+  text-decoration: none;
 }
 
-.nav-link:hover, .nav-link.router-link-active {
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-blue);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.router-link-active {
   color: var(--primary-blue);
+}
+
+.nav-link:hover::after,
+.nav-link.router-link-active::after {
+  width: 100%;
 }
 
 .nav-actions {
@@ -196,5 +220,4 @@ const toggleMenu = () => {
     display: flex;
   }
 }
-
 </style>
