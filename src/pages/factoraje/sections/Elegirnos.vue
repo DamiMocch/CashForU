@@ -85,9 +85,9 @@
     --Gradient-Blue,
     linear-gradient(
       180deg,
-      var(--Colors-Brand-colors-Aqua-aqua-300, #66cbff) 0%,
-      var(--Colors-Brand-colors-Aqua-aqua-500, #00a9ff) 50%,
-      var(--Colors-Brand-colors-Blue-blue-500, #0277d9) 100%
+      var(--Colors-Brand-colors-Aqua-aqua-300, #004999) 0%,
+      var(--Colors-Brand-colors-Aqua-aqua-500, #003166) 50%,
+      var(--Colors-Brand-colors-Blue-blue-500, #001833) 100%
     )
   );
 
