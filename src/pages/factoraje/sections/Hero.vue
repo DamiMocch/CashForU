@@ -47,10 +47,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('@/assets/svg/factoraje-hero.svg');
-  background-size: cover;
-  background-position: center bottom;
-  background-repeat: no-repeat;
+  background: var(
+    --Gradient-Blue,
+    linear-gradient(
+      180deg,
+      var(--Colors-Brand-colors-Aqua-aqua-300, #004999) 0%,
+      var(--Colors-Brand-colors-Aqua-aqua-500, #003166) 50%,
+      var(--Colors-Brand-colors-Blue-blue-500, #001833) 100%
+    )
+  );
   color: var(--text-light, #ffffff);
 }
 
